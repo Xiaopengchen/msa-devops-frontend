@@ -40,13 +40,15 @@ export default function App() {
   const [query, setQuery] = useState('chicken');
   const [HasFocus, setHasFocus] = useState<boolean>(false);
 
+  const REACT_APP_API_KEY = '8debdefb90d8b85863a80ce83fb8744d';
+
   useEffect(() => {
     getRecipes();
   }, [query]);
 
   const getRecipes = async () => {
     const response = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=91d66eec&app_key=${process.env.REACT_APP_API_KEY}`
+      `https://api.edamam.com/search?q=${query}&app_id=91d66eec&app_key=${REACT_APP_API_KEY}`
     );
     const data = await response.json();
     setRecipes(data.hits);
