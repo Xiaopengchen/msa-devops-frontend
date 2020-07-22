@@ -11,3 +11,5 @@ the pipeline runs on a Linux agent. the pipeline only run when a commit is pushe
 the rootDir variable contains the string 'my-app' and the buildDir variable contains the string 'my-app/build'.
 
 The first task finds, downloads and caches the version of Node.js in version 10.x.
+
+Then we build our react app using the commands in -scripts.
