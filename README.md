@@ -13,3 +13,7 @@ the rootDir variable contains the string 'my-app' and the buildDir variable cont
 The first task finds, downloads and caches the version of Node.js in version 10.x.
 
 Then we build our react app using the commands in -scripts. We changes to the root directory 'my-app'. The "npm install" installs the packages and the "npm run build" builds the app and puts the production ready build in the "build" folder in our current directory ("my-app").
+
+Then we zip the folder through - task: ArchiveFiles@2.
+
+Finally, the last task lookd in the '$(Build.ArtifactStagingDirectory)' and publish the zip in that directory.
